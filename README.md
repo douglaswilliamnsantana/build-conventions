@@ -18,14 +18,14 @@ pluginManagement {
 
 ## Available Plugins
 
-### `convention.android.application`
+### `io.github.douglaswilliamnsantana.convention.android.application`
 
 For Android application modules. Applies: AGP, Kotlin Android, Compose compiler, KSP, Hilt.
 
 ```kotlin
 // build.gradle.kts
 plugins {
-    id("convention.android.application") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.android.application") version "1.0.0"
 }
 
 android(namespace = "com.example.app")
@@ -33,13 +33,13 @@ android(namespace = "com.example.app")
 
 ---
 
-### `convention.android.library`
+### `io.github.douglaswilliamnsantana.convention.android.library`
 
 For Android library modules without Compose. Applies: AGP library, Kotlin Android, KSP, Serialization.
 
 ```kotlin
 plugins {
-    id("convention.android.library") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.android.library") version "1.0.0"
 }
 
 android(namespace = "com.example.feature.data")
@@ -47,13 +47,13 @@ android(namespace = "com.example.feature.data")
 
 ---
 
-### `convention.android.library.compose`
+### `io.github.douglaswilliamnsantana.convention.android.library.compose`
 
 For Android library modules with Compose. Applies: AGP library, Kotlin Android, Compose compiler, KSP, Serialization.
 
 ```kotlin
 plugins {
-    id("convention.android.library.compose") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.android.library.compose") version "1.0.0"
 }
 
 androidCompose(namespace = "com.example.feature.ui")
@@ -61,50 +61,50 @@ androidCompose(namespace = "com.example.feature.ui")
 
 ---
 
-### `convention.kotlin.library`
+### `io.github.douglaswilliamnsantana.convention.jvm.library`
 
 For pure Kotlin JVM modules (no Android). Applies: Kotlin JVM.
 
 ```kotlin
 plugins {
-    id("convention.kotlin.library") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.jvm.library") version "1.0.0"
 }
 ```
 
 ---
 
-### `convention.kmp.application`
+### `io.github.douglaswilliamnsantana.convention.kmp.application`
 
 For Kotlin Multiplatform application modules with Compose Multiplatform. Applies: KMP, AGP application, Compose Multiplatform, Compose compiler.
 
 ```kotlin
 plugins {
-    id("convention.kmp.application") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.kmp.application") version "1.0.0"
 }
 ```
 
 ---
 
-### `convention.kmp.library`
+### `io.github.douglaswilliamnsantana.convention.kmp.library`
 
 For Kotlin Multiplatform library modules. Applies: KMP, AGP library, Serialization. Targets: `androidTarget`, `iosX64`, `iosArm64`, `iosSimulatorArm64`.
 
 ```kotlin
 plugins {
-    id("convention.kmp.library") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.kmp.library") version "1.0.0"
 }
 ```
 
 ---
 
-### `convention.jacoco`
+### `io.github.douglaswilliamnsantana.convention.jacoco`
 
 Adds JaCoCo coverage reporting to any module. Generates XML and HTML reports via the `jacocoReport` task.
 
 ```kotlin
 plugins {
-    id("convention.android.library") version "1.0.0"
-    id("convention.jacoco") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.android.library") version "1.0.0"
+    id("io.github.douglaswilliamnsantana.convention.jacoco") version "1.0.0"
 }
 ```
 
@@ -113,6 +113,8 @@ Run the report:
 ```bash
 ./gradlew :module-name:jacocoReport
 ```
+
+> **Note:** All plugin IDs are prefixed with `io.github.douglaswilliamnsantana` to comply with Maven Central namespace requirements.
 
 ## Default Configuration
 

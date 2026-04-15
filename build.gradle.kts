@@ -62,31 +62,31 @@ mavenPublishing {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "convention.android.application"
+            id = "io.github.douglaswilliamnsantana.convention.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "convention.android.library"
+            id = "io.github.douglaswilliamnsantana.convention.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "convention.android.library.compose"
+            id = "io.github.douglaswilliamnsantana.convention.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("kotlinLibrary") {
-            id = "convention.kotlin.library"
+            id = "io.github.douglaswilliamnsantana.convention.jvm.library"
             implementationClass = "KotlinLibraryConventionPlugin"
         }
         register("kmpApplication") {
-            id = "convention.kmp.application"
+            id = "io.github.douglaswilliamnsantana.convention.kmp.application"
             implementationClass = "KmpApplicationConventionPlugin"
         }
         register("kmpLibrary") {
-            id = "convention.kmp.library"
+            id = "io.github.douglaswilliamnsantana.convention.kmp.library"
             implementationClass = "KmpLibraryConventionPlugin"
         }
         register("jacoco") {
-            id = "convention.jacoco"
+            id = "io.github.douglaswilliamnsantana.convention.jacoco"
             implementationClass = "JacocoConventionPlugin"
         }
     }
